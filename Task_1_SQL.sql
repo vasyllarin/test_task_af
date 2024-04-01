@@ -33,8 +33,8 @@ LIMIT 1
 SELECT name, genre
 FROM books b1
 WHERE price = (SELECT MAX(price)
-			   FROM books b2
-			   WHERE b2.genre = b1.genre)
+	       FROM books b2
+	       WHERE b2.genre = b1.genre)
 ORDER BY name ASC
 ;
 
